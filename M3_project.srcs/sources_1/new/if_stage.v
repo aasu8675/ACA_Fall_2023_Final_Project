@@ -19,60 +19,93 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-`include "io_def.vh"
 
-module if_stage (
+/* Simple SAXPY Operation
+   
+   for(int i = 0; i < 2; i++)
+   {
+       z[i] = (a * x[i]) + y[i];
+   }
+
+*/
+
+
+//////////////////////////////////////////////////////////////////////////////////
+
+
+/* Instructions to be loaded:
+   
+   I-type:
+   
+   +--------------+-----+-----+-----+-------+
+   |    imm[11:0] | rs1 |funct3| rd  |opcode|
+   +--------------+-----+-----+-----+-------+
+   |      12      |  5  |  3  |  5  |  7    |
+   +--------------+-----+-----+-----+-------+
+   
+   
+   1. Add Immediate Value of a into R9: [0000000 00011] 00000 000 01001 0010011
+   2. Load Value of x[0] into R1: [0000000 00000] 00000 010 00001 0000011
+   3. Load Value of y[0] into R2: [0000000 00001] 00000 010 00010 0000011
+   4. Multiply 'a * x[0]' Result in R8: 1111111 00001 01001 000 01000 0110011
+   5. Add y[0] + R8, Result placed in R5: 0000000 00010 01000 000 00101 0110011
+   6. Store R5 Result in Memory: 0000000 00101 01010 010 00000 0100011
+   
+*/
+
+//////////////////////////////////////////////////////////////////////////////////
+   
+module if_stage #(
+    parameter MEM_DEPTH = 1024,
+    parameter MEM_WIDTH = 32
+)(
     input CLK,
     input RESET,
-    output reg [31:0] instruction
+    output reg [MEM_WIDTH-1:0] instruction
 );
 
-    // Signals for memory interaction
-    reg [31:0] if_pc;  // Program Counter
-    wire [63:0] if_instr;  // Instruction fetched from memory
-    reg if_mem_rd;  // Read strobe interface
-    wire if_mem_ready;  // Transaction status
-    
+    // Memory signals
+    reg [MEM_WIDTH-1:0] instr_mem [0:MEM_DEPTH-1];
 
-    // Connect to memory interface
-    mem_example if_mem (
-        .clk_mem(CLK),
-        .rst_n(RESET),
-        .addr(if_pc),
-        .width(`RAM_WIDTH32), // Assuming a 32-bit instruction width
-        .data_out(if_instr),
-        .rstrobe(if_mem_rd),
-        .transaction_complete(if_mem_ready),
-        .ready()
-    );
+    // Memory read address
+    reg [9:0] PC;  // 10 bit Program Counter to read 1024 blocks of memory
+    integer i;
 
-    // State machine for IF stage
-    reg [1:0] if_state;
-
-    localparam IF_STATE_IDLE = 2'b00;
-    localparam IF_STATE_FETCH = 2'b01;
-
-    always @(posedge CLK or negedge RESET) begin
+    always @(posedge CLK) begin
         if (!RESET) begin
-            if_state <= IF_STATE_IDLE;
-            if_pc <= 32'h0; // Set program counter to 0 at reset
-        end else begin
-            case (if_state)
-                IF_STATE_IDLE: begin
-                    if_mem_rd <= 0;
-                    // if_mem_ready <= 0;
-                    if_pc <= if_pc + 4; // Increment the PC for the next instruction fetch
-                    if_state <= IF_STATE_FETCH;
-                end
-
-                IF_STATE_FETCH: begin
-                    if_mem_rd <= 1;
-                    if (if_mem_ready) begin
-                        instruction <= if_instr;
-                        if_state <= IF_STATE_IDLE;
-                    end
-                end
-            endcase
+            PC <= 10'b0000000000;
+            
+            instr_mem[0] <= 32'b0000000_00011_00000_000_01001_0010011;  // ADDI R9, R0, 3   
+            instr_mem[1] <= 32'b0000000_00000_00000_010_00001_0000011;  // LW R1, 0(R0)
+            instr_mem[2] <= 32'b0000000_00001_00000_010_00010_0000011;  // LW R2, 1(R0)
+            
+            instr_mem[3] <= 32'h0;  // NOP
+            instr_mem[4] <= 32'h0;  // NOP
+   
+            
+            instr_mem[5] <= 32'b1111111_00001_01001_000_01000_0110011;  // Custom Instruction: MUL R8, R9, R1
+            
+            instr_mem[6] <= 32'h0;  // NOP
+            instr_mem[7] <= 32'h0;  // NOP
+            instr_mem[8] <= 32'h0;  // NOP
+            
+            instr_mem[9] <= 32'b0000000_00010_01000_000_00101_0110011;  // ADD R5, R2, R8
+            instr_mem[10] <= 32'h0;  // NOP
+            instr_mem[11] <= 32'h0;  // NOP
+            instr_mem[12] <= 32'h0;  // NOP
+            
+            instr_mem[13] <= 32'b0000000_00101_00000_010_00101_0100011; // SW R5, 5(R0)
+            
+            for (i = 14; i < MEM_DEPTH; i = i + 1) begin
+                instr_mem[i] <= 32'h0;
+            end
+        end
+        else begin
+            // Read data from memory
+            instruction <= instr_mem[PC];
+            
+            // Update Program Counter
+            PC <= PC + 1;
         end
     end
 

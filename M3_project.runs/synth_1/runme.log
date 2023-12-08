@@ -14,7 +14,7 @@ ECHO is off.
     ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source riscv_top.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 485.898 ; gain = 183.098
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 486.082 ; gain = 180.406
 Command: synth_design -top riscv_top -part xc7a100tcsg324-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
@@ -22,142 +22,94 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 32872
+INFO: [Synth 8-7075] Helper process launched with PID 15304
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1362.680 ; gain = 438.520
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1335.379 ; gain = 440.855
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'riscv_top' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/riscv_top.v:23]
-INFO: [Synth 8-6157] synthesizing module 'if_stage' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/if_stage.v:24]
-INFO: [Synth 8-6157] synthesizing module 'mem_example' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/mem_example.v:16]
-INFO: [Synth 8-6157] synthesizing module 'mig' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.runs/synth_1/.Xil/Vivado-29796-AAMIR/realtime/mig_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'mig' (0#1) [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.runs/synth_1/.Xil/Vivado-29796-AAMIR/realtime/mig_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'flag_sync' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/flag_sync.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'flag_sync' (0#1) [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/flag_sync.v:1]
-INFO: [Synth 8-6157] synthesizing module 'ff_sync' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/ff_sync.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'ff_sync' (0#1) [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/ff_sync.v:1]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/mem_example.v:208]
-INFO: [Synth 8-6155] done synthesizing module 'mem_example' (0#1) [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/mem_example.v:16]
-WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (28) of module 'mem_example' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/if_stage.v:41]
-WARNING: [Synth 8-7071] port 'ddr2_dq' of module 'mem_example' is unconnected for instance 'if_mem' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/if_stage.v:38]
-WARNING: [Synth 8-7071] port 'ddr2_dqs_n' of module 'mem_example' is unconnected for instance 'if_mem' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/if_stage.v:38]
-WARNING: [Synth 8-7071] port 'ddr2_dqs_p' of module 'mem_example' is unconnected for instance 'if_mem' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/if_stage.v:38]
-WARNING: [Synth 8-7071] port 'ddr2_addr' of module 'mem_example' is unconnected for instance 'if_mem' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/if_stage.v:38]
-WARNING: [Synth 8-7071] port 'ddr2_ba' of module 'mem_example' is unconnected for instance 'if_mem' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/if_stage.v:38]
-WARNING: [Synth 8-7071] port 'ddr2_ras_n' of module 'mem_example' is unconnected for instance 'if_mem' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/if_stage.v:38]
-WARNING: [Synth 8-7071] port 'ddr2_cas_n' of module 'mem_example' is unconnected for instance 'if_mem' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/if_stage.v:38]
-WARNING: [Synth 8-7071] port 'ddr2_we_n' of module 'mem_example' is unconnected for instance 'if_mem' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/if_stage.v:38]
-WARNING: [Synth 8-7071] port 'ddr2_ck_p' of module 'mem_example' is unconnected for instance 'if_mem' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/if_stage.v:38]
-WARNING: [Synth 8-7071] port 'ddr2_ck_n' of module 'mem_example' is unconnected for instance 'if_mem' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/if_stage.v:38]
-WARNING: [Synth 8-7071] port 'ddr2_cke' of module 'mem_example' is unconnected for instance 'if_mem' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/if_stage.v:38]
-WARNING: [Synth 8-7071] port 'ddr2_cs_n' of module 'mem_example' is unconnected for instance 'if_mem' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/if_stage.v:38]
-WARNING: [Synth 8-7071] port 'ddr2_dm' of module 'mem_example' is unconnected for instance 'if_mem' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/if_stage.v:38]
-WARNING: [Synth 8-7071] port 'ddr2_odt' of module 'mem_example' is unconnected for instance 'if_mem' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/if_stage.v:38]
-WARNING: [Synth 8-7071] port 'cpu_clk' of module 'mem_example' is unconnected for instance 'if_mem' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/if_stage.v:38]
-WARNING: [Synth 8-7071] port 'data_in' of module 'mem_example' is unconnected for instance 'if_mem' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/if_stage.v:38]
-WARNING: [Synth 8-7071] port 'wstrobe' of module 'mem_example' is unconnected for instance 'if_mem' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/if_stage.v:38]
-WARNING: [Synth 8-7023] instance 'if_mem' of module 'mem_example' has 25 connections declared, but only 8 given [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/if_stage.v:38]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/if_stage.v:60]
-INFO: [Synth 8-6155] done synthesizing module 'if_stage' (0#1) [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/if_stage.v:24]
+INFO: [Synth 8-6157] synthesizing module 'if_stage' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/if_stage.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'if_stage' (0#1) [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/if_stage.v:58]
 INFO: [Synth 8-6157] synthesizing module 'id_stage' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:23]
-	Parameter REG_FILE_DEPTH bound to: 32 - type: integer 
-	Parameter REG_FILE_WIDTH bound to: 32 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'id_stage' (0#1) [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:23]
 INFO: [Synth 8-6157] synthesizing module 'exe_stage' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/exe_stage.v:22]
-INFO: [Synth 8-226] default block is never used [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/exe_stage.v:45]
+INFO: [Synth 8-226] default block is never used [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/exe_stage.v:54]
 INFO: [Synth 8-6155] done synthesizing module 'exe_stage' (0#1) [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/exe_stage.v:22]
+INFO: [Synth 8-6157] synthesizing module 'mem_stage' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/mem_stage.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'mem_stage' (0#1) [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/mem_stage.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'riscv_top' (0#1) [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/riscv_top.v:23]
-WARNING: [Synth 8-7137] Register if_mem_rd_reg in module if_stage has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/if_stage.v:44]
-WARNING: [Synth 8-7137] Register instruction_reg in module if_stage has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/if_stage.v:71]
+WARNING: [Synth 8-7129] Port mem_address[31] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mem_address[30] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mem_address[29] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mem_address[28] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mem_address[27] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mem_address[26] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mem_address[25] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mem_address[24] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mem_address[23] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mem_address[22] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mem_address[21] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mem_address[20] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mem_address[19] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mem_address[18] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mem_address[17] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mem_address[16] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mem_address[15] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mem_address[14] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mem_address[13] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mem_address[12] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mem_address[11] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mem_address[10] in module mem_stage is either unconnected or has no load
+WARNING: [Synth 8-7129] Port write_enable in module exe_stage is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1473.879 ; gain = 549.719
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1621.684 ; gain = 727.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1473.879 ; gain = 549.719
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1621.684 ; gain = 727.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1473.879 ; gain = 549.719
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1621.684 ; gain = 727.160
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1473.879 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.732 . Memory (MB): peak = 1621.684 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.gen/sources_1/ip/mig/mig/mig_in_context.xdc] for cell 'if_inst/if_mem/mig1'
-Finished Parsing XDC File [c:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.gen/sources_1/ip/mig/mig/mig_in_context.xdc] for cell 'if_inst/if_mem/mig1'
 Parsing XDC File [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc]
-WARNING: [Vivado 12-584] No ports matched 'CLK100MHZ'. [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:7]
-WARNING: [Vivado 12-584] No ports matched 'LED[0]'. [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:15]
-WARNING: [Vivado 12-584] No ports matched 'LED[1]'. [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:16]
-WARNING: [Vivado 12-584] No ports matched 'LED[2]'. [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:17]
-WARNING: [Vivado 12-584] No ports matched 'LED[3]'. [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:18]
-WARNING: [Vivado 12-584] No ports matched 'LED[4]'. [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:19]
-WARNING: [Vivado 12-584] No ports matched 'LED[5]'. [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:20]
-WARNING: [Vivado 12-584] No ports matched 'LED[6]'. [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:21]
-WARNING: [Vivado 12-584] No ports matched 'LED[7]'. [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:22]
-WARNING: [Vivado 12-584] No ports matched 'LED[8]'. [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:23]
-WARNING: [Vivado 12-584] No ports matched 'LED[9]'. [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:24]
-WARNING: [Vivado 12-584] No ports matched 'LED[10]'. [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:25]
-WARNING: [Vivado 12-584] No ports matched 'LED[11]'. [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:26]
-WARNING: [Vivado 12-584] No ports matched 'LED[12]'. [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:27]
-WARNING: [Vivado 12-584] No ports matched 'LED[13]'. [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:28]
-WARNING: [Vivado 12-584] No ports matched 'LED[14]'. [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:29]
-WARNING: [Vivado 12-584] No ports matched 'LED[15]'. [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:30]
-WARNING: [Vivado 12-584] No ports matched 'CPU_RESETN'. [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:64]
-INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'tck' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:266]
-WARNING: [Vivado 12-508] No pins matched 'mem_ex/mig1/u_mig_mig/u_ddr2_infrastructure/gen_mmcm.mmcm_i/CLKFBOUT'. [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:270]
-WARNING: [Vivado 12-508] No pins matched 'pll1/inst/mmcm_adv_inst/CLKOUT1'. [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:271]
+WARNING: [Vivado 12-507] No nets matched 'CLK100MHZ_IBUF'. [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:67]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc:67]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc]
-WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/riscv_top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/constrs_1/new/mfp_nexys4_ddr.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/riscv_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/riscv_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1564.246 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1769.629 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 The system cannot find the path specified.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1564.246 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.301 . Memory (MB): peak = 1769.629 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1564.246 ; gain = 640.086
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1769.629 ; gain = 875.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1564.246 ; gain = 640.086
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1769.629 ; gain = 875.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property KEEP_HIERARCHY = SOFT for if_inst/if_mem/mig1. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1564.246 ; gain = 640.086
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1769.629 ; gain = 875.105
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'mem_example'
-INFO: [Synth 8-802] inferred FSM for state register 'if_state_reg' in module 'if_stage'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-              STATE_IDLE |                              000 |                              000
-             STATE_WRITE |                              001 |                              100
-       STATE_WRITEDATA_H |                              010 |                              101
-       STATE_WRITEDATA_L |                              011 |                              110
-           STATE_PREREAD |                              100 |                              001
-              STATE_READ |                              101 |                              010
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'mem_example'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-           IF_STATE_IDLE |                                0 |                               00
-          IF_STATE_FETCH |                                1 |                               01
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'if_state_reg' using encoding 'sequential' in module 'if_stage'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1564.246 ; gain = 640.086
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1769.629 ; gain = 875.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -165,35 +117,37 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   3 Input   32 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 1     
 +---XORs : 
 	   2 Input     32 Bit         XORs := 1     
-	   2 Input      1 Bit         XORs := 6     
 +---Registers : 
-	               64 Bit    Registers := 2     
-	               32 Bit    Registers := 36    
-	                8 Bit    Registers := 1     
+	               32 Bit    Registers := 1038  
+	               12 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
 	                7 Bit    Registers := 2     
-	                5 Bit    Registers := 2     
-	                3 Bit    Registers := 4     
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 11    
+	                5 Bit    Registers := 3     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---Multipliers : 
+	              32x32  Multipliers := 1     
 +---Muxes : 
-	   4 Input   64 Bit        Muxes := 4     
-	   2 Input   64 Bit        Muxes := 5     
-	   6 Input   64 Bit        Muxes := 1     
-	   5 Input   64 Bit        Muxes := 1     
-	   2 Input   32 Bit        Muxes := 3     
-	   8 Input    8 Bit        Muxes := 1     
-	   2 Input    8 Bit        Muxes := 3     
-	   6 Input    8 Bit        Muxes := 1     
-	   2 Input    5 Bit        Muxes := 1     
-	   6 Input    3 Bit        Muxes := 1     
-	   2 Input    3 Bit        Muxes := 2     
-	   2 Input    2 Bit        Muxes := 2     
-	   4 Input    2 Bit        Muxes := 3     
-	   2 Input    1 Bit        Muxes := 13    
-	   6 Input    1 Bit        Muxes := 10    
-	   4 Input    1 Bit        Muxes := 4     
+	   2 Input   32 Bit        Muxes := 5     
+	   3 Input   32 Bit        Muxes := 2     
+	1024 Input   32 Bit        Muxes := 1     
+	   5 Input   32 Bit        Muxes := 1     
+	   2 Input   12 Bit        Muxes := 2     
+	   2 Input    7 Bit        Muxes := 2     
+	   2 Input    5 Bit        Muxes := 4     
+	   5 Input    5 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 4     
+	   4 Input    3 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 1     
+	   4 Input    1 Bit        Muxes := 1024  
+	   3 Input    1 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 51    
+	   5 Input    1 Bit        Muxes := 6     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -210,26 +164,262 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP exe_inst/alu_result0, operation Mode is: A*B.
+DSP Report: operator exe_inst/alu_result0 is absorbed into DSP exe_inst/alu_result0.
+DSP Report: operator exe_inst/alu_result0 is absorbed into DSP exe_inst/alu_result0.
+DSP Report: Generating DSP exe_inst/alu_result0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator exe_inst/alu_result0 is absorbed into DSP exe_inst/alu_result0.
+DSP Report: operator exe_inst/alu_result0 is absorbed into DSP exe_inst/alu_result0.
+DSP Report: Generating DSP exe_inst/alu_result0, operation Mode is: A*B.
+DSP Report: operator exe_inst/alu_result0 is absorbed into DSP exe_inst/alu_result0.
+DSP Report: operator exe_inst/alu_result0 is absorbed into DSP exe_inst/alu_result0.
+DSP Report: Generating DSP exe_inst/alu_result0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator exe_inst/alu_result0 is absorbed into DSP exe_inst/alu_result0.
+DSP Report: operator exe_inst/alu_result0 is absorbed into DSP exe_inst/alu_result0.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[9][31]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[9][30]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[9][29]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[9][28]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[9][27]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[9][26]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[9][25]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[9][24]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[9][23]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[9][22]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[9][21]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[9][20]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[9][19]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[9][18]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[9][17]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[9][16]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[9][15]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[9][14]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[9][13]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[9][12]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[9][11]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[9][10]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[9][9]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[9][8]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[9][7]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[9][6]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[9][5]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[9][4]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[9][3]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[9][2]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[9][1]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[9][0]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[8][31]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[8][30]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[8][29]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[8][28]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[8][27]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[8][26]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[8][25]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[8][24]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[8][23]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[8][22]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[8][21]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[8][20]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[8][19]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[8][18]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[8][17]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[8][16]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[8][15]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'i_0/id_inst/register_file_reg[8][14]__0/Q' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+INFO: [Common 17-14] Message 'Synth 8-6859' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.srcs/sources_1/new/id_stage.v:63]
+INFO: [Common 17-14] Message 'Synth 8-6858' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1564.246 ; gain = 640.086
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1769.629 ; gain = 875.105
+---------------------------------------------------------------------------------
+ Sort Area is riscv_top__GC0 exe_inst/alu_result0_0 : 0 0 : 3101 5879 : Used 1 time 0
+ Sort Area is riscv_top__GC0 exe_inst/alu_result0_0 : 0 1 : 2778 5879 : Used 1 time 0
+ Sort Area is riscv_top__GC0 exe_inst/alu_result0_3 : 0 0 : 2759 5418 : Used 1 time 0
+ Sort Area is riscv_top__GC0 exe_inst/alu_result0_3 : 0 1 : 2659 5418 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|riscv_top   | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|riscv_top   | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|riscv_top   | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|riscv_top   | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1564.246 ; gain = 640.086
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 1769.629 ; gain = 875.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1564.246 ; gain = 640.086
+Finished Timing Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 1769.629 ; gain = 875.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1564.246 ; gain = 640.086
+Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 1769.629 ; gain = 875.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -247,90 +437,80 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1564.246 ; gain = 640.086
+Finished IO Insertion : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 1769.629 ; gain = 875.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1564.246 ; gain = 640.086
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 1769.629 ; gain = 875.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1564.246 ; gain = 640.086
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 1769.629 ; gain = 875.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1564.246 ; gain = 640.086
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 1769.629 ; gain = 875.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1564.246 ; gain = 640.086
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 1769.629 ; gain = 875.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1564.246 ; gain = 640.086
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 1769.629 ; gain = 875.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+------+--------------+----------+
-|      |BlackBox name |Instances |
-+------+--------------+----------+
-|1     |mig           |         1|
-+------+--------------+----------+
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
 
 Report Cell Usage: 
-+------+-------+------+
-|      |Cell   |Count |
-+------+-------+------+
-|1     |mig    |     1|
-|2     |BUFG   |     1|
-|3     |CARRY4 |     7|
-|4     |LUT1   |     3|
-|5     |LUT2   |     5|
-|6     |LUT3   |     3|
-|7     |LUT4   |     2|
-|8     |LUT5   |     1|
-|9     |LUT6   |     8|
-|10    |FDCE   |    39|
-|11    |FDPE   |     1|
-|12    |FDRE   |    16|
-|13    |IBUF   |     2|
-+------+-------+------+
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |LUT1 |     1|
+|3     |FDRE |     1|
+|4     |IBUF |     2|
+|5     |OBUF |     1|
++------+-----+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1564.246 ; gain = 640.086
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 1769.629 ; gain = 875.105
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 1564.246 ; gain = 549.719
-Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1564.246 ; gain = 640.086
+Synthesis finished with 0 errors, 960 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:41 . Memory (MB): peak = 1769.629 ; gain = 727.160
+Synthesis Optimization Complete : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 1769.629 ; gain = 875.105
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1564.246 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1769.629 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1564.246 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1769.629 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 The system cannot find the path specified.
-Synth Design complete | Checksum: dc6abeeb
+Synth Design complete | Checksum: 16efb8ed
 INFO: [Common 17-83] Releasing license: Synthesis
-38 Infos, 43 Warnings, 0 Critical Warnings and 0 Errors encountered.
+26 Infos, 25 Warnings, 201 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:34 . Memory (MB): peak = 1564.246 ; gain = 1041.219
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1564.246 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:52 ; elapsed = 00:00:54 . Memory (MB): peak = 1769.629 ; gain = 1283.547
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1769.629 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.runs/synth_1/riscv_top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file riscv_top_utilization_synth.rpt -pb riscv_top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Nov 30 14:08:30 2023...
+INFO: [Common 17-206] Exiting Vivado at Fri Dec  8 00:43:38 2023...
