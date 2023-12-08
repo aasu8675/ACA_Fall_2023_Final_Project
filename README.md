@@ -1,2 +1,2 @@
-# ACA_Fall_2023_Final_Project
-Final research project for the course ACA
+# ECEN 5593 - Advanced Computer Architecture Final Project
+This respository consists of a Vivado Project for a RISC-V based 5-Stage Pipeline targeting the NEXYS A7-100T Board
