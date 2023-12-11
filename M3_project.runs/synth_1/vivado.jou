@@ -3,8 +3,8 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Fri Dec  8 00:42:37 2023
-# Process ID: 12076
+# Start of session at: Mon Dec 11 12:34:37 2023
+# Process ID: 24560
 # Current directory: C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.runs/synth_1
 # Command line: vivado.exe -log riscv_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source riscv_top.tcl
 # Log file: C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.runs/synth_1/riscv_top.vds

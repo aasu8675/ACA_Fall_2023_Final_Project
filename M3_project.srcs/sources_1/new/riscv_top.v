@@ -26,9 +26,10 @@ module riscv_top #(
 )(
     input CLK100MHZ,
     input CPU_RESETN, 
-    //output [31:0] saxpy_output,
     output store_complete
 );
+    
+    assign store_complete = store_complete_reg;  // Output which shows Memory at Location offset 5 has correct data
 
     // IF Connectivity
     wire [31:0] if_stage_instruction;
@@ -118,15 +119,14 @@ module riscv_top #(
         .result(saxpy_op)
     );
     
-    assign store_complete = store_complete_reg;
-    
+    /* Checking for correct data at memory offset 5 */
     always@(posedge CLK100MHZ) begin
         if(CPU_RESETN == 1'b0) begin
-            store_complete_reg <= 1'b1;
+            store_complete_reg <= 1'b0;
         end else
         if(saxpy_op == 32'h1A) begin
             store_complete_reg <= 1'b1;
-            end
+        end
         else begin
             store_complete_reg <= 1'b0;
         end

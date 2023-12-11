@@ -1,0 +1,3 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/CU_Boulder/SEMESTER_3/ACA/Project/Project_3/M3_Project/M3_project.sim/sim_1/synth/timing/xsim/riscv_top_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module riscv_top
+INFO: [VRFC 10-311] analyzing module glbl
